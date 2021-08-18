@@ -29,8 +29,57 @@ const roomsData = [
         size: 60,
         capacity: 4,
         bedSize: 'King',
-        services: ['Wifi', 'Television', 'Bathroom', 'Breakfast', 'Kettles', 'Toaster', 'Microwave', 'Safe'],
+        services: ['Wifi', 'Television', 'Bathroom', 'Breakfast', 'Kettles', 'Toaster', 'Microwave', 'Safe', 'Room Service', 'Heater'],
         images: ['https://www.plazahotelcasino.com/wp-content/uploads/2014/11/DeluxeRoom-Hero-1.jpg', 'https://www.plazahotelcasino.com/wp-content/uploads/2019/02/MiniSuite-Hero-768x339.jpg'],
         securityDeposit: 150
     }
 ]
+
+
+
+// loop through roomsData and add the rooms to the rooms showcase div
+for(var i = 0; i <= roomsData.length; i++){
+    let room = roomsData[i];
+    $('#rooms_showcase').append(
+       `<div class='col-lg-4 col-md-6 col-sm-1'>
+						<div class='card'>
+							<img class='card-img-top card-img-full'
+									src='${room.images[0]}' alt='hi' />
+							<div class='card-body'>
+								<h4 class='card-title text-center text-bold'>${room.name}</h4>
+								<p class='card-title text-center'><span class='pricing'>$${room.price}</span>/pernight</p>
+								<div class='card-text mt-2'>
+									<table>
+										<tbody>
+										<tr>
+											<td class="r-o">Size:</td>
+											<td>${room.size} ft</td>
+										</tr>
+										<tr>
+											<td class="r-o">Capacity:</td>
+											<td>Max persion ${room.capacity}</td>
+										</tr>
+										<tr>
+											<td class="r-o">Bed:</td>
+											<td>${room.bedSize} Bed</td>
+										</tr>
+										<tr>
+											<td class="r-o">Deposit:</td>
+											<td>$${room.securityDeposit}</td>
+										</tr>
+										</tbody>
+									</table>
+
+									<div class='services mt-4'>
+										<p class='text-blue text-sm text-left'>Services</p>
+										<ul id='services-list-box'>
+										${room.services.map(service => `<li class='services-list'>${service}</li>`).join('')}
+										</ul>
+									</div>
+									<a href="reservations.html" class="btn book-room btn-block">Book Room</a>
+								</div>
+							</div>
+						</div>
+					</div>`
+    );
+}
