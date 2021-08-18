@@ -254,6 +254,7 @@ footer {
 
 /* Contact Us */
 
+
 .container_contact {
   position: relative;
   width: 100%;
@@ -303,6 +304,7 @@ main form {
 
 .title {
   color: #fff;
+  /* font-weight: 500; */
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1;
@@ -445,21 +447,19 @@ main .btn:hover {
 .icon {
   width: 28px;
   margin-right: 0.7rem;
+  padding-bottom: 15px;
 }
 
 .social-media {
   padding: 2rem 0 0 0;
 }
-
 .social-media p {
   color: #333;
 }
-
 .social-icons {
   display: flex;
   margin-top: 0.5rem;
 }
-
 .social-icons a {
   width: 35px;
   height: 35px;
@@ -493,7 +493,7 @@ main .btn:hover {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #0902356e, #4a2bfa73);
+  background: linear-gradient(to bottom, #5089C6, #141E61);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
