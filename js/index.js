@@ -28,7 +28,7 @@ const roomsData = [
         price: 250,
         size: 60,
         capacity: 4,
-        bedSize: 'King',
+        bedSize: 'Queen XL',
         services: ['Wifi', 'Television', 'Bathroom', 'Breakfast', 'Kettles', 'Toaster', 'Microwave', 'Safe', 'Room Service', 'Heater'],
         images: ['https://www.plazahotelcasino.com/wp-content/uploads/2014/11/DeluxeRoom-Hero-1.jpg', 'https://www.plazahotelcasino.com/wp-content/uploads/2019/02/MiniSuite-Hero-768x339.jpg'],
         securityDeposit: 150
@@ -44,7 +44,7 @@ for(var i = 0; i <= roomsData.length; i++){
        `<div class='col-lg-4 col-md-6 col-sm-1'>
 						<div class='card'>
 							<img class='card-img-top card-img-full'
-									src='${room.images[0]}' alt='hi' />
+									src='${room.images[0]}' alt='${room.name}' />
 							<div class='card-body'>
 								<h4 class='card-title text-center text-bold'>${room.name}</h4>
 								<p class='card-title text-center'><span class='pricing'>$${room.price}</span>/pernight</p>
