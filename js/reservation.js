@@ -108,8 +108,26 @@ $(document).ready(function(){
       
       
       $("#response").fadeIn(1000);
-      
-      
+
+
+        // send data to getform url
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', `
+        Booking for: ${name}\n
+        Email: ${email}\n
+        No of adults: ${$('#checkInAdults').val()}\n
+        No of Children: ${$('#checkInChildren').val()}\n
+        Staying from: ${new Date($('#checkindate').val()).toDateString()} to ${new Date($('#checkoutdate').val()).toDateString()}\n
+        Extra requests: ${$('#more').val()}
+        `);
+
+        fetch('https://getform.io/f/5216d441-c542-4746-8437-764de9fadb9a', {
+            method: 'POST',
+            body: formData
+        });
+
         });
 
        

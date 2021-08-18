@@ -8,9 +8,9 @@
       <script src="https://kit.fontawesome.com/9c66dcb850.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script src="reservation.js"></script>
+      <script src="../js/reservation.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-      <link rel='stylesheet' href='reservations.css'>
+      <link rel='stylesheet' href='../css/reservations.css'>
       <title>Prime Hotel | Home</title>
    </head>
    <body>
@@ -76,13 +76,14 @@
 			 <div id="sub-container">
             <div id="contents">
                <div class="book-now">
+                  <form>
                   <div class="checkin-date">
                      <label>Check In:</label><br>
-                     <input type="text" id="dateinpicker"><img src="calendar-icon.png" alt="calendar-icon">
+                     <input type="text" id="dateinpicker"><img src="../images/calendar.png" alt="calendar-icon">
                   </div>
                   <div class="checkout-date">
                      <label>Check Out:</label><br>
-                     <input type="text" id="dateoutpicker"><img src="calendar-icon.png" alt="calendar-icon">
+                     <input type="text" id="dateoutpicker"><img src="../images/calendar.png" alt="calendar-icon">
                   </div>
                   <div class="adults">
                      <label>Adults:</label><br>
@@ -102,6 +103,7 @@
                   <div class="availability">
                      <input type="button" id="availability" value="Check availability">
                   </div>
+                  </form>
                </div>
             </div>
             <br><br><br>
@@ -135,7 +137,7 @@
                   </div>
                   <div class="section colm colm6">
                      <label class="field-label">Number of Children</label>
-                     <input>
+                     <input id='checkInChildren'>
                      <span></span>
                   </div>
                   <div class="frm-row">
@@ -155,8 +157,8 @@
                   </div>
                   <div class="section">
                      <label class="field-label">Anything else we should know about?</label>
-                     <textarea class="gui-textarea" ></textarea>
-                     Please: Be as descriptive as possible
+                     <textarea class="gui-textarea" id='more' ></textarea>
+                     <span>Please: Be as descriptive as possible</span>
                   </div>
                   <div id="booking">
                      <input type="submit" id="confirm-booking" value="Confirm Booking">
