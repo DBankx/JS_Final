@@ -258,220 +258,38 @@ footer {
    /* background-color: #5089C6;*/
     background-position: right;
     background-size: contain;
-    height: 900px;
-    
+    height: 400px;
+    display: grid;
+    padding-right: 400px;
 }
-.book-now {
-    width: 100%;
-    padding: 20px;
-}
-#contents{
-    display: inline-block;
-    background-color:#001E6C;
-    /*margin-left: 900px;*/
-    border-radius: 20px;
-    width: 500px;
-    max-width: 100%;
-}
-
-#contents input{
-    /*margin-left: 1em;*/
-    margin-right: 1em;
-    margin-bottom: 1em;
-    margin-top: .8em;
-    font-size: 1.2em;
-    padding: .3em;
-    width: 75%;
-    font-weight: 300;
-    border: none;
-    background: #fff;
-    border-radius: 10px;
-}
-
-#contents select{
-    margin-right: 1em;
-    margin-bottom: 1em;
-    margin-top: .8em;
-    font-size: 1.2em;
-    padding: .3em;
-    width: 20%;
-    font-weight: 300;
-    border: none;
-    background: #fff;
-    border-radius: 10px;
-}
-
-.availability input{
-    color:#001E6C;
-    background-color:white;
-    font-weight: 600;
-    font-size: 1.1em;
-    width: 100% !important;
-}
-.checkin-date, .checkout-date, .adults, .rooms, .availability {
-
-    margin: 10px;
-}
-
-.book-now img {
-
-    height: 30px;
-}
-
-
-#contents label{
-
-    font-size: 1.2em;
-    color: white;
-}
-
-#comment {
-
-    width: 30em;
-}
-
-/*#dateinpicker , #dateoutpicker , select {
-
-  background-color:lightsalmon;
-}
-
-#availability{
-
-    background-color:lightsalmon;
-}*/
-
-#wrapper {
-    font-weight: 300;
-    width: 800px;
-    max-width: 100%;
-    padding: 20px;
-    margin: auto;
-    /*background-color:rgb(162, 206, 151);*/
-      background-color:#001E6C;
-    border-radius: 20px;
-}
-
-#wrapper label{
-    font-size: 1.2em;
-    color: white;
-}
-
-h3{
-    color: white;
-}
-
-section{
-
-    padding: 40px;
-    color: white;
-
-}
-
-.field-label{
-    width: 300px;
-
-}
-.ui-datepicker-title{
-
-    padding: 10px;
-    text-align: center;
-    background-color:white;
-}
-.ui-datepicker-prev{
-
-    padding: 10px;
-    text-align: center;
-    background-color:white;
-    float: left;
-}
-#wrapper  span { color: red;}
-
-.ui-datepicker-next{
-
-    padding: 10px;
-    text-align: center;
-    float: right;
-    background-color:white;
-}
-.ui-datepicker .ui-datepicker-title select{color: #000;
-    font-weight: 400}
-
-.ui-datepicker-calendar{
-
-    background-color: white;
-}
-
-.ui-datepicker-calendar td{
-
-    padding: 5px 10px;
-}
-
-.ui-datepicker-calendar td a:hover{
-
- background: white;
-}
-
-.ui-datepicker-calendar td{
-
-    font-size: 1em;
-}
-
-#output {
-
-    
-    color: white;
-}
-.question , .extra {
-
-    color: white;
-}
-#wrapper input,#wrapper select {
-    margin: 10px;
-    font-size: 1.2em;
-    width: auto;
-    border: none;
-    border-radius: 10px;
-    padding: .3em;
-}
-    input[type="checkbox"] {
-
-    margin:5px;
-}
-
-textarea {
-    width: 250px;
-}
-
-#booking input{
-
-    width: 200px;
-}
-
-
-#kids option {
-
-    width: 400px;
-}
-
-#reservation_form {
-
-    display: none;
-}
-
-#response {
-
-    display: none;
-    color: white;
+#sub-container h4 {
     background-color: #0F044C;
-    text-align: center;
+    text-align:center;
+    color: white;
+    height:auto;
+    max-height: 100px;
 }
 
 @media (max-width: 1200px) {
 
     #sub-container {
+        padding-right: 400px;
+    }
 
-        background-image: none;
+    #sub-container h4{
+        width: auto;
+        font-size: 1.1em;
+        height: auto;
     }
 
 
+}
+
+@media (max-width: 768px) {
+
+    #sub-container h4{
+        font-size: 0.9em;
+        max-width: 200px;
+        word-wrap: break-word;
+    }
 }
