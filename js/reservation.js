@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-  
+  var check = 0;
+
   $( function() {
     $( "#dateinpicker" ).datepicker({
 
@@ -11,7 +12,7 @@ $(document).ready(function(){
   $( function() {
     $( "#dateoutpicker" ).datepicker({
       
-      minDate: new Date()
+      minDate: "0+1"
     });
 
   } );    
@@ -44,6 +45,8 @@ $(document).ready(function(){
 
       $('#reservation_form').toggle("slow");
       $('#contents').toggle("hide");
+      $('#sub-container').css('background-image', 'none');
+      
 
       }
 
@@ -100,15 +103,15 @@ $(document).ready(function(){
         $("#phone").next().text("");
       }
 
-     
-      if(!isValid)//preventing the submission of the form if the entries are not valid
-	    {
-		      evt.preventDefault();
-	    }
+      check=1;
       
-      
-      $("#response").fadeIn(1000);
+      evt.preventDefault();
 
+      if(isValid)//preventing the submission of the form if the entries are not valid
+	    {
+        sessionStorage.email = email;
+        location.href = "confirmation.html";
+	    }
 
         // send data to getform url
         const formData = new FormData();
@@ -128,16 +131,13 @@ $(document).ready(function(){
             body: formData
         });
 
-        });
-
-       
+        });       
 
         $("#cancel-booking").click( function(){
 
                $('#reservation_form').toggle("hide");
-         
                 $('#contents').toggle("slow");
-
+                $('#sub-container').css('background-image', "url('../images/customer.png')");
                  $("#dateoutpicker").val("");
                  $("#dateinpicker").val("");
 
