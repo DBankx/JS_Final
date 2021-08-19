@@ -121,6 +121,12 @@ a {
     color: #141E61 !important;
 }
 
+.logo-white {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
 
 /* FOOTER STYLES */
 .content {
@@ -440,6 +446,14 @@ section{
 
 textarea {
     width: 250px;
+    border: none;
+    border-radius: 10px;
+    padding: .3em;
+    font-size: 1.2em;
+}
+
+#booking {
+    margin-top: 1em;
 }
 
 #booking input{
@@ -465,6 +479,7 @@ textarea {
     background-color: #0F044C;
     text-align: center;
 }
+
 
 @media (max-width: 1200px) {
 

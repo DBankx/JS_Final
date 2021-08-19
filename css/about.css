@@ -61,6 +61,11 @@ a {
     content: "";
 }
 
+.logo-white {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
 
 .top-nav .top-right {
     text-align: right;

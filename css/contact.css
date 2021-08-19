@@ -38,6 +38,12 @@ a {
     margin-right: 4px;
 }
 
+.logo-white {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
 .top-nav .top-left li {
     list-style: none;
     display: inline-block;

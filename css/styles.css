@@ -298,6 +298,13 @@ table {
     transition: background-color .2s ease-in-out;
 }
 
+
+.logo-white {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
 .book-room {
     width: 100%;
     background: #141E61;
