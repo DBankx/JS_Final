@@ -44,7 +44,7 @@ for(var i = 0; i <= roomsData.length; i++){
        `<div class='col-lg-4 col-md-6 col-sm-1'>
 						<div class='card'>
 							<img class='card-img-top card-img-full'
-									src='${room.images[0]}' alt='${room.name}' />
+									src='${room !== undefined && room.images[0]}' alt='${room.name}' />
 							<div class='card-body'>
 								<h4 class='card-title text-center text-bold'>${room.name}</h4>
 								<p class='card-title text-center'><span class='pricing'>$${room.price}</span>/pernight</p>

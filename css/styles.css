@@ -122,6 +122,14 @@ a {
 }
 
 
+
+.logo-white{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+
 /* FOOTER STYLES */
 .content {
     min-height: calc(100vh - 390px);
@@ -313,4 +321,29 @@ table {
 
 .card-img-full {
     height: 250px;
+}
+
+
+.footer-text .ft-contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 992px){
+    .top-nav{
+        display: none;
+    }
+    footer {
+        height: 700px !important;
+    }
+
+    .copyright-option ul li{
+        display: block;
+    }
+
+    .copyright-option ul {
+        margin: 0;
+        padding: 0;
+    }
+
 }
