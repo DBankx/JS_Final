@@ -5,10 +5,15 @@
 	<meta name='viewport'
 	      content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
 	<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/9c66dcb850.js" crossorigin="anonymous"></script>
+	<script src="../js/index.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<link rel='stylesheet' href='../css/styles.css'>
+	<link rel='stylesheet' href='../css/design.css'>
+	<link rel='stylesheet' href='../css/test.css'>
+	<link rel="stylesheet" href="../css/search.css">
+	
+	<link rel="stylesheet" href="../css/feedback.css">
 	<title>Prime Hotel | Home</title>
 </head>
 
@@ -38,11 +43,9 @@
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
 							</div>
-							<a href="rooms.html" class="bk-btn">Find a room</a>
+							<a href="#" class="bk-btn">Find a room</a>
 							<div class="language-option">
-								<img
-										src="https://cdn.britannica.com/25/4825-004-F1975B92/Flag-United-Kingdom.jpg"
-							alt='uk-flag'	/>
+								<img src="data:image/webp;base64,UklGRoACAABXRUJQVlA4IHQCAABQDwCdASoaABoAPm0skkYkIqGhKA1QgA2JbACdMoR1B6N+IHIGas9wMlr5pPzPmA/qvOAbgD9S/7XlFHPK/rt8G37deilduNGn8T8oD9A7QDeZ5ID2by1/+h5ZfnP/ke4T+pX+V4Df9jApU9eDakszDxY6d8trf31F7okkfXVO+Ra/AAD+0jYtc59zUwE8lYLyg+k/kkj+tKv7+1/qOR2Ggo15LL+9pjmTeiztsy4E0El+tnecFyJpJ4GcMk4dXjlQDgibZM+kM6A+cv4ZzOJpl5hdxTLANlmtDSUd02IQ7fE7YYeav55/F0TtOzkU+NTX6Kxlmm4DAFDraXkHui0jGE+dGBe/sUuZP7xHXEzfkE9P8Np7dfRROO1Qkr0nNfjuV/xECH7EvloD9sYzCzlrsl8n1N4KzxD6iiAf/1O03V7KoOEkr/+LR2lxSFyldd45CXy7R4lwVDVfz+Mx/Is8FgFnadcLD1CzGAv2wijufUVCY5ub3LaLhKXZhSNZJX1MOIabiUBpbzSSUsFJ8qSdT1Ppv1pd4hmH/Uq//XwLtMAc23Y62CqlpQ6mPZUPQqJhqy/kkXleKWaJraQKiTk/FnQ4h8SIOPoQY7f8/AfU7yDtjC4422Bef66QsW/xHP+xVDOX7uudY9x7Fmz0ixOAt/xRj/+dpIO0CvPY8RekmJbc6ef49b7+Dfov+HPL+Z679//lsF3ZSQbNbC3615iwG/dp86P/KYgjcKFV9a69GccH5uOdwsenDkf41rrTY5vf+B0VEnq9CU64QUD5k4CSbckwm1ump/A6m4l45YHTyERJiPcpQnmJpyH/OVU/yO6YAAAA" alt="" data-pagespeed-url-hash="2722194200" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 								<span>EN <i class="fa fa-angle-down"></i></span>
 							</div>
 						</div>
@@ -77,9 +80,214 @@
 
 	<div class='container'>
 <!-- WRITE CODE FOR BODY HERE!!  -->
+
+	</div>
+<!-----Header-->
+
+<div id="hero" class="hero">
+	<div class="container">
+		<div class="hero__text-box">
+			<h1 class="hero__text">
+				<span class="hero__text-top">THE</span>
+				<span class="hero__text-bottom">PRIME</span>
+				<p class="heading">Luxurious 5 Star HOtel</p>
+			</h1>
+			<a href="../pages/rooms.html"><button class="btn btn-green">Book a Room</button></a>
+		</div>
 	</div>
 </div>
+</div>
 
+
+<!-------SEARCH-->
+<div class="booking_info">
+
+	<div class="opt">
+	  <span class="active">Hotel</span>
+	</div>
+
+	<div class="booking_details">
+
+	  <!-- <div class="item">
+		<label><i class="fa fa-search"></i></label>
+		<input type="text" class="form-control" placeholder="Enter a destination" />
+	  </div> -->
+
+	  <div class="item">
+		  <label>Check-in</label>
+		  <input type="date" class="form-control" id="checkin" />
+		  <!-- <input type="text" id="dateinpicker" /> -->
+		<!-- <div class="date">19th Aug 2021 <i class="fa fa-angle-down"></i></div>
+		<div class="days">Thursday</div> -->
+	  </div>
+
+	  <div class="item">
+		  <label>Check-out</label>
+		<input type="date" class="form-control" id="checkout" />
+		<!-- <div class="date">19th Aug 2021 <i class="fa fa-angle-down"></i></div>
+		<div class="days">Thursday</div> -->
+	  </div>
+
+	  <div class="item row">
+		<label>Rooms</label>
+		<select class="form-control" id="rooms" >
+			<option>1</option>
+			<option>2</option>
+		</select>
+		<!-- <div class="col">ascsac</div> -->
+		<!-- <div class="people">2 adults, 0 children <i class="fa fa-angle-down"></i></div>
+		<div class="days">1 room</div> -->
+		</div>
+
+		<div class="item row">
+			<label>Adults</label>
+			<select class="form-control" id="adults">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+		</div>
+
+	  <div class="item">
+		<div class="cta active" id="search-hotels">Search</div>
+	  </div>
+
+	</div>
+
+  </div>
+
+<!------->
+
+<main>
+
+
+	  <!-- ROOMS SECTION -->
+	<section class="rooms">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 padding-right">
+					<img src="../images/rooms.jpg" alt="image">
+				</div>
+				<div class="col-2">
+					<div class="text-box">
+						<h2 class="headline">Rooms</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Architecto enim mollitia
+							dolorum
+							necessitatibus vero sunt deleniti minus vel, non quasi?</p>
+						<a href="../pages/rooms.html"><button class="btn btn-green">Explore Now</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<!---------TESTIMONIAL-->
+<div class="testimonials">
+	<div class="inner">
+	  <h1>Testimonials</h1>
+	  <div class="border"></div>
+
+	  <div class="row">
+		<div class="col">
+		  <div class="testimonial">
+			<img src="../images/p1.png" alt="">
+			<div class="name">John D.</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			</div>
+
+				<p class="test">
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+
+		<div class="col">
+		  <div class="testimonial">
+			<img src="../images/p2.png" alt="">
+			<div class="name">Full name</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			  <i class="far fa-star"></i>
+			</div>
+
+			<p>
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+
+		<div class="col">
+		  <div class="testimonial">
+			<img src="../images/p3.png" alt="">
+			<div class="name">Full name</div>
+			<div class="stars">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			</div>
+
+			
+			<p>
+			  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+
+	<!-- INFO SECTION -->
+  <section class="info">
+	<div class="container">
+		<div class="member">
+				
+			<div class="join">
+				<h4>Join Prime Rewards<br> Now</h4>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet cum amet,<br> eligendi quo quae labore enim fuga. Deleniti, commodi laboriosam vel<br> inventore veniam aspernatur, pariatur unde dolor, laudantium saepe facere.</p>
+		      <a href="/pages/memberships.html"> <button class="btn btn-green mem">Join Now</button></a> 
+			</div>
+		</div>
+	</div>
+</section>
+
+	<!-- RATINGS -->
+	<section class="feedback">
+		<div id="panel" class="panel-container">
+			<strong>How satisfied are you with our <br> customer support performance?</strong>
+			<div class="ratings-container">
+			  <div class="rating">
+				<img src="https://image.flaticon.com/icons/svg/187/187150.svg" alt="">
+				<small>Unhappy</small>
+			  </div>
+	  
+			  <div class="rating">
+				<img src="https://image.flaticon.com/icons/svg/187/187136.svg" alt="">
+				<small>Neutral</small>
+			  </div>
+	  
+			  <div class="rating active">
+				<img src="https://image.flaticon.com/icons/svg/187/187133.svg" alt="">
+				<small>Satisfied</small>
+			  </div>
+			</div>
+			<button class="btn-f" id="send">Send Review</button>
+		
+	</div>
+  </section>	
 
 <!-- Footer -->
 	<footer>
@@ -88,7 +296,7 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="ft-about">
-							<div class="logo-white">
+							<div class="logo">
 								<a href="index.html" class='logo'>
 									Prime Hotel
 								</a>
@@ -150,6 +358,7 @@
 </div>
 <!--Javascript-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<script src='../js/rooms.js'></script>
+<script src='../js/index.js'></script>
+<script src='../js/script.js'></script>
 </body>
 </html>
