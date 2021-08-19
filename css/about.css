@@ -1,5 +1,3 @@
-
-/* Navigation and Footer */
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap');
 
 *,
@@ -260,77 +258,76 @@ footer {
   text-align: center;
 } */
 .about_h2{
-  text-align: center;
-}
-.services li{
-  list-style-type: none;
-}
-.half{
-  display:flex
-}
-.first_half{
-  width:50%;
-  margin-left: 15%;
-}
-.intro_about{
-  padding-right: 15%;
-}
-.one-third {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 270px;
-  margin: 50px;
-  border-radius: 15px;
-  border: 3px solid black;
-  background-color: #ffffff;
-}
-
-.card-image {
-  border-radius: 15px 15px 0 0;
-  height: 250px;
-  margin-bottom: 15px;
-  background-size: cover;
-}
-
-.card h2 {
-  padding: 10px;
-}
-
-.card a,
-.card2 a {
-  background-color: #4E182A;
-  color: #ffffff;
-  text-align: center;
-  display: block;
-  padding: 10px 20px;
-  margin: 20px 50px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.25em;
-}
-
-/* .rooms {
-  background-image: url(../images/suite.jpg);
-}
-
-.reservation {
-  background-image: url(../images/luxury.jpg);
-}
-
-.membership {
-  background-image: url(../images/standard.jpg);
-} */
-.background_video{
-  background-image: url(../images/aboutpgimage.jpg);
-  width:auto;
-  height:300px;
-  background-position: center;
-  text-align: center;
-  color: White;
-}
-
+    text-align: center;
+  }
+  .services li{
+    list-style-type: none;
+  }
+  .half{
+    display:flex
+  }
+  .first_half{
+    width:50%;
+    margin-left: 15%;
+  }
+  .intro_about{
+    padding-right: 15%;
+  }
+  .one-third {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 270px;
+    margin: 50px;
+    border-radius: 15px;
+    border: 3px solid black;
+    background-color: #ffffff;
+  }
+  
+  .card-image {
+    border-radius: 15px 15px 0 0;
+    height: 350px;
+    /* margin-bottom: 5px; */
+    background-size: cover;
+  }
+  
+  /* .card h2 {
+      overflow: visible;
+      padding: 10px; 
+    text-align: center;
+    background-color: #5089C6;
+  } */
+  
+  .rooms {
+    background-image: url("https://cdn.traveltripper.io/site-assets/512_863_12597/media/2018-02-22-041437/large_DDBDB.jpg");
+  }
+  
+  .reservation {
+    background-image: url(../images/customer.png);
+  }
+  
+  .membership {
+    background-image: url(../images/membership.png);
+  }
+  
+  .res_bg_image{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/aboutpgimage.jpg);
+    width:auto;
+    height:300px;
+    background-position: center;
+    text-align: center;
+    color: White;
+  }
+  .background_video a{
+      padding: 10px;
+      border-radius: 15px;
+      color: white;;
+      background-color: #141E61;
+  }
+  .res_heading{
+      padding-top: 100px;
+  }
