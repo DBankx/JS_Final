@@ -190,39 +190,7 @@ h2  {
 }
 /* BASIC & REUSABLE CLASSES */
 
-.heading-text {
-    text-align: center;
-    position: relative;
-}
 
-.heading-text::after {
-    content: '';
-    display: block;
-    width: 10rem;
-    height: .2rem;
-    background-color: var(--main-color);
-    margin: 0 auto;
-    margin-top: 3rem;
-}
-
-.text-green {
-    color: var(--main-color);
-}
-
-.text-white {
-    color: var(--white-color);
-}
-
-.container {
-    width: 100%;
-    max-width: 120rem;
-    padding: 0 2.4rem;
-    margin: 0 auto;
-}
-
-.container-medium {
-    max-width: 110rem;
-}
 
 .row {
     display: flex;
