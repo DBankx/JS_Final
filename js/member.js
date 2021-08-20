@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#name").focus();//setting focus to arrival date
+    $("#name").focus();//setting focus to first name of the form.
 	$("#membership_form").submit(function(event)//event handler for submitting form
                     {
                         var isValid = true;
