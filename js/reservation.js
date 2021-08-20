@@ -7,7 +7,9 @@ Description : This reservation.js file is used to book rooms for customers after
 $(document).ready(function(){
 
   var check = 0;
-
+    
+	
+// This function takes query parameter name as input and gives the parameter value as output
   var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
