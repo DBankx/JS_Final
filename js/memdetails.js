@@ -1,3 +1,10 @@
+/*
+Javascript JavaScript Programming Final Project
+Name: Hrithik Malhotra
+Student ID:8738516
+Description: In this i have added toggle and animation effect for membership benefits content in membership page.
+*/ 
+
 $(document).ready(function() {
 	
 	// runs when an h3 heading is clicked
