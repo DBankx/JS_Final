@@ -1,3 +1,10 @@
+/*
+Javascript JavaScript Programming Final Project
+Name: Hrithik Malhotra
+Student ID:8738516
+Description: In this i have added a form Validation for membership page.
+*/ 
+
 $(document).ready(function() {
     $("#name").focus();//setting focus to first name of the form.
 	$("#membership_form").submit(function(event)//event handler for submitting form
