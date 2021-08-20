@@ -122,6 +122,14 @@ a {
 }
 
 
+
+.logo-white{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+
 /* FOOTER STYLES */
 .content {
     min-height: calc(100vh - 390px);
@@ -250,7 +258,6 @@ footer {
     line-height: 26px;
     margin: 0 0 15px 0;
 }
-
 /* Hrithik Starting Code */
 
 
@@ -471,6 +478,11 @@ p {
 .btn-green:hover::before {
     width: 120%;
 }
-
+.iconify{
+   
+    color: #0F044C;
+    padding-left: 30px;
+   
+}
 
 
