@@ -2,14 +2,84 @@ $(document).ready(function(){
 
   var check = 0;
 
-  $( function() {//for check in date
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+  };
+
+  $("#availability").click( function(){
+       
+    var dateIn = $("#dateinpicker").val();
+    var dateOut = $("#dateoutpicker").val();
+    var adults = $("#adults").val()
+    $("#checkindate").val(dateIn);
+    $("#checkoutdate").val(dateOut);
+    $("#checkInAdults").val(adults);
+    //$("#wrapper").style.display="block";
+    //  $("#content").style.display="none";
+    if(dateIn=="" || dateOut==""){
+      evt.preventDefault();
+    }
+    if(dateIn > dateOut){
+      $("#dateoutpicker").val("");
+      $("#checkindate").val("");
+      $("#checkoutdate").val("");
+      $("#checkInAdults").val("");
+      alert("Checkout date should be higher");
+
+      //document.getElementById('reservation_form').style.display = "block";
+        //wrapper.style.display = "block";
+
+        
+    } else {
+
+    $('#reservation_form').toggle("slow");
+    $('#contents').toggle("hide");
+    $('#sub-container').css('background-image', 'none');
+    }
+
+  });
+
+  let dateIn = getUrlParameter('dateIn')
+  let dateOut = getUrlParameter('dateOut')
+  let rooms = getUrlParameter('rooms')
+  let adults = getUrlParameter('adults')
+
+  if(dateIn) {
+    $("#dateinpicker").val(dateIn);
+  }
+  if(dateOut) {
+    $("#dateoutpicker").val(dateOut);
+  }
+  if(rooms) {
+    //do nothing
+  }
+  if(adults) {
+    $("#checkInAdults").val(adults);
+  } 
+  if (dateIn && dateOut && rooms && adults) {
+    $("#availability").trigger('click')
+  }
+
+  $( function() {
     $( "#dateinpicker" ).datepicker({
 
       minDate: new Date()
     });
   } );
 
-  $( function() {//for check out date
+  $( function() {
     $( "#dateoutpicker" ).datepicker({
       
       minDate: "0+1"
@@ -17,45 +87,15 @@ $(document).ready(function(){
 
   } );    
 
-      $("#availability").click( function(){//clicking Check availability button
-       
-        var dateIn = $("#dateinpicker").val();
-        var dateOut = $("#dateoutpicker").val();
-        var adults = $("#adults").val()
-        $("#checkindate").val(dateIn);
-        $("#checkoutdate").val(dateOut);
-        $("#checkInAdults").val(adults);
-        //$("#wrapper").style.display="block";
-      //  $("#content").style.display="none";
-      if(dateIn=="" || dateOut==""){
-        evt.preventDefault();
-      }
-      if(dateIn > dateOut){//checking if check in date greater than check out date
-        $("#dateoutpicker").val("");
-        $("#checkindate").val("");
-        $("#checkoutdate").val("");
-        $("#checkInAdults").val("");
-        alert("Checkout date should be higher");
-		
-      } else {
-
-      $('#reservation_form').toggle("slow");// to display reservations form
-      $('#contents').toggle("hide");//to hide availability check
-      $('#sub-container').css('background-image', 'none');//to hide background image
       
-
-      }
-
-    });
-
-      $("#reservation_form").submit( evt =>// to submit form after validating the user entries
+      $("#reservation_form").submit( evt =>/// to submit form after validating the user entries
         {
         let isValid=true;
 
         let emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;// to check if email_address is valid or not using regular expression
 	      const email = $("#email").val().trim();
 	      $("#email").val(email);
-	      if(email=="")// to check if email is entered or not as this is mandatory field
+	      if(email=="")
       	{
 	      	isValid=false;
 	      	$("#email").next().text("This field is required");
@@ -82,7 +122,6 @@ $(document).ready(function(){
 		    $("#name").next().text("");
 	    }
 
-	  var phonePattern =  /^\d{3}-\d{3}-\d{4}$/;
       const phone = $("#phone").val().trim();//to check if phone is entered and is valid as this is mandatory field
       $("#phone").val(phone);
       if(phone=="")
@@ -90,7 +129,7 @@ $(document).ready(function(){
         isValid=false;
         $("#phone").next().text("This field is required");
       }
-      else if( !phonePattern.test(phone)) 
+      else if(isNaN(phone) || phone.length!=10)
       {
         isValid=false;
         $("#phone").next().text("Please enter a valid number")
@@ -100,7 +139,7 @@ $(document).ready(function(){
         $("#phone").next().text("");
       }
 
-      
+      check=1;
       
       evt.preventDefault();
 
@@ -130,11 +169,11 @@ $(document).ready(function(){
 
         });       
 
-        $("#cancel-booking").click( function(){//to cancel booking 
+        $("#cancel-booking").click( function(){
 
-               $('#reservation_form').toggle("hide");//hide reservations form
-                $('#contents').toggle("slow");//to display check availability form
-                $('#sub-container').css('background-image', "url('../images/customer.png')");//displaying background image
+               $('#reservation_form').toggle("hide");
+                $('#contents').toggle("slow");
+                $('#sub-container').css('background-image', "url('../images/customer.png')");
                  $("#dateoutpicker").val("");
                  $("#dateinpicker").val("");
 
