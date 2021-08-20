@@ -9,6 +9,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link rel='stylesheet' href='../css/contact.css'>
+	<script src="../js/contactform.js"></script>
 	<title>Prime Hotel | Contact Us</title>
 </head>
 
@@ -123,23 +124,22 @@
 					</div>
             	</div>
 				<div class="contact-form">
-					<!-- <span class="circle one"></span>
-					<span class="circle two"></span> -->
+					
       
-                    <form action="contactresponse.html" autocomplete="off"  id="contact_form">
+                    <form action="contactresponse.html" autocomplete="off"  id="contact_form" method="get">
                     
 						<div class="input-container">
-							<input type="text" name="name" id="name" class="input" required/>
+							<input type="text" name="name" id="name" class="input">
 							<label for="name">Username</label>
 							<span>Username</span>
 						</div>
 						<div class="input-container">
-							<input type="email" name="email" id="email" class="input" required/>
+							<input type="email" name="email" id="email" class="input" >
 							<label for="email">Email</label>
 							<span>Email</span>
 						</div>
 						<div class="input-container">
-							<input type="tel" name="phone" id="phone" class="input" required/>
+							<input type="tel" name="phone" id="phone" class="input">
 							<label for="phone">Phone</label>
 							<span>Phone</span>
 						</div>

@@ -428,6 +428,29 @@ span{
   
   
 }
+.footer-text .ft-contact ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 992px){
+  .top-nav{
+      display: none;
+  }
+  footer {
+      height: 700px !important;
+  }
+
+  .copyright-option ul li{
+      display: block;
+  }
+
+  .copyright-option ul {
+      margin: 0;
+      padding: 0;
+  }
+
+}
 
 
 

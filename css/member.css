@@ -276,10 +276,10 @@ h3.minus {
 	background: url(../images/minus.png) no-repeat left center;
    
 }
-a {
+/* a {
     color: black;
     text-decoration: none; 
-}
+} */
 a:focus, a:hover {
 	color: blue;
 }
@@ -484,5 +484,27 @@ p {
     padding-left: 30px;
    
 }
+.footer-text .ft-contact ul {
+    margin: 0;
+    padding: 0;
+}
 
+@media only screen and (max-width: 992px){
+    .top-nav{
+        display: none;
+    }
+    footer {
+        height: 700px !important;
+    }
+
+    .copyright-option ul li{
+        display: block;
+    }
+
+    .copyright-option ul {
+        margin: 0;
+        padding: 0;
+    }
+
+}
 

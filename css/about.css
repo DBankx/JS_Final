@@ -255,95 +255,113 @@ footer {
     line-height: 26px;
     margin: 0 0 15px 0;
 }
+.footer-text .ft-contact ul {
+    margin: 0;
+    padding: 0;
+}
 
-/* About Us */
+@media only screen and (max-width: 992px){
+    .top-nav{
+        display: none;
+    }
+    footer {
+        height: 700px !important;
+    }
+
+    .copyright-option ul li{
+        display: block;
+    }
+
+    .copyright-option ul {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+/* ------------------------About Us ------------------------*/
 
 
-/* .container_aboutus{
-  text-align: center;
-} */
+
+.about_heading{
+    font-size: 2.5rem;
+}
+.half{
+    padding-top: 10px;
+}
 .about_h2{
     text-align: center;
-  }
-  .services li{
+}
+.services li{
     list-style-type: none;
-  }
-  .half{
+}
+.half{
     display:flex
-  }
-  .first_half{
+}
+.first_half{
     width:50%;
     margin-left: 15%;
-  }
-  .intro_about{
+}
+.intro_about{
     padding-right: 15%;
-  }
-  .one-third {
+}
+.one-third {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  
-  .card {
+}
+
+.card {
     width: 270px;
-    margin: 50px;
-      height: 350px;
+    margin: 60px;
+    height: 350px;
     border-radius: 15px;
     background-color: #ffffff;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-  
-  .card-image {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-image {
     border-radius: 15px;
     height: 100%;
-      filter: brightness(60%);
-    /* margin-bottom: 5px; */
+    filter: brightness(70%);
+  /* margin-bottom: 5px; */
     background-size: cover;
-  }
-  
-  /* .card h2 {
-      overflow: visible;
-      padding: 10px; 
-    text-align: center;
-    background-color: #5089C6;
-  } */
-  
-  .rooms {
-    background-image: url("https://cdn.traveltripper.io/site-assets/512_863_12597/media/2018-02-22-041437/large_DDBDB.jpg");
-  }
-  
-  .reservations {
+}
+
+
+.rooms {
+    background-image: url(../images/about_room.jpg);
+}
+
+.reservations {
     background-image: url(../images/reserve.jpeg);
-  }
-  
-  .membership {
+}
+
+.membership {
     background-image: url(../images/about_member.jfif);
-  }
-  
-  .res_bg_image{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../images/aboutpgimage.jpg);
+}
+
+.res_bg_image{
+    background-image:linear-gradient(to bottom , #5089c671, #241a71d7),
+    url(../images/aboutpgimage.jpg);
     width:auto;
     height:300px;
     background-position: center;
     text-align: center;
     color: White;
-  }
-  .background_video a{
-      padding: 10px;
-      border-radius: 15px;
-      color: white;;
-      background-color: #141E61;
-  }
-  .res_heading{
-      padding-top: 100px;
-  }
+}
 
-  .second_hlf > ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  }
+.res_heading{
+    padding-top: 80px;
+    padding-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.second_hlf > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 .second_hlf > ul li:before {
     content: '✓ ';
@@ -359,4 +377,51 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+}
+
+/* BUTTONS */
+
+.btn{
+    display: inline-block;
+    background: transparent;
+    border: .2rem solid white;
+    border-radius: .9rem;
+    cursor: pointer;
+    outline: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-green {
+    color: white;
+    transition: color .5s;
+    z-index: 100;
+}
+.btn-green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 0;
+    height: 100%;
+    transform: skewX(25deg);
+    z-index: -1;
+    transition: width .7s;
+}
+
+.btn-green::before {
+    background-color: rgb(250, 244, 234);
+}
+.btn-green:hover{
+    color: rgb(109, 104, 104);
+}
+
+.btn-green:hover::before {
+    width: 120%;
 }
