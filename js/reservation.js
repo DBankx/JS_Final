@@ -1,3 +1,9 @@
+/*
+Javascript Final Project
+Developed by  : Sreenath Rao T S
+Student ID : 8731569
+Description : This reservation.js file is used to book rooms for customers after basic validations
+*/
 $(document).ready(function(){
 
   var check = 0;
@@ -44,9 +50,9 @@ $(document).ready(function(){
         
     } else {
 
-    $('#reservation_form').toggle("slow");
-    $('#contents').toggle("hide");
-    $('#sub-container').css('background-image', 'none');
+    $('#reservation_form').toggle("slow");//this displays reservation form
+    $('#contents').toggle("hide");//this hides check availability form
+    $('#sub-container').css('background-image', 'none');//this used to hide background-image
     }
 
   });
@@ -73,22 +79,22 @@ $(document).ready(function(){
   }
 
   $( function() {
-    $( "#dateinpicker" ).datepicker({
+    $( "#dateinpicker" ).datepicker({//datepicker
 
-      minDate: new Date()
+      minDate: new Date()//shows current date
     });
   } );
 
   $( function() {
     $( "#dateoutpicker" ).datepicker({
       
-      minDate: "0+1"
+      minDate: "0+1"//shows current date + 1
     });
 
   } );    
 
       
-      $("#reservation_form").submit( evt =>/// to submit form after validating the user entries
+      $("#reservation_form").submit( evt =>// to submit form after validating the user entries
         {
         let isValid=true;
 
@@ -110,9 +116,9 @@ $(document).ready(function(){
 	    	$("#email").next().text("");
 	    }
    
-      const name = $("#name").val().trim();//to check if name is entered or not as this is mandatory field
+      const name = $("#name").val().trim();
 	    $("#name").val(name);
-	    if(name=="")
+	    if(name=="")//to check if name is entered or not as this is mandatory field
 	    {
 		    isValid=false;
 		    $("#name").next().text("This field is required");
@@ -122,14 +128,14 @@ $(document).ready(function(){
 		    $("#name").next().text("");
 	    }
 
-      const phone = $("#phone").val().trim();//to check if phone is entered and is valid as this is mandatory field
+      const phone = $("#phone").val().trim();
       $("#phone").val(phone);
       if(phone=="")
       {
         isValid=false;
         $("#phone").next().text("This field is required");
       }
-      else if(isNaN(phone) || phone.length!=10)
+      else if(isNaN(phone) || phone.length!=10)//to check if phone is entered and is valid as this is mandatory field
       {
         isValid=false;
         $("#phone").next().text("Please enter a valid number")
@@ -141,11 +147,11 @@ $(document).ready(function(){
 
       check=1;
       
-      evt.preventDefault();
+      evt.preventDefault();//preventing the submission of the form if the entries are not valid
 
-      if(isValid)//preventing the submission of the form if the entries are not valid
+      if(isValid)
 	    {
-        sessionStorage.email = email;
+        sessionStorage.email = email;//storing email in session storage
         location.href = "confirmation.html";
 	    }
 
@@ -169,11 +175,11 @@ $(document).ready(function(){
 
         });       
 
-        $("#cancel-booking").click( function(){
+        $("#cancel-booking").click( function(){//to cancel reservation form
 
-               $('#reservation_form').toggle("hide");
-                $('#contents').toggle("slow");
-                $('#sub-container').css('background-image', "url('../images/customer.png')");
+               $('#reservation_form').toggle("hide");// this hides reservation form
+                $('#contents').toggle("slow");//this displays check availability form
+                $('#sub-container').css('background-image', "url('../images/customer.png')");//this updates css property to show background images
                  $("#dateoutpicker").val("");
                  $("#dateinpicker").val("");
 
