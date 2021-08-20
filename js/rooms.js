@@ -38,13 +38,13 @@ const roomsData = [
 
 
 // loop through roomsData and add the rooms to the rooms showcase div
-for(var i = 0; i <= roomsData.length; i++){
+for(var i = 0; i < roomsData.length; i++){
     let room = roomsData[i];
     $('#rooms_showcase').append(
        `<div class='col-lg-4 col-md-6 col-sm-1'>
 						<div class='card'>
 							<img class='card-img-top card-img-full'
-									src='${room !== undefined && room.images[0]}' alt='${room.name}' />
+									src='${room !== undefined && room.images[0]}' alt='room-image' />
 							<div class='card-body'>
 								<h4 class='card-title text-center text-bold'>${room.name}</h4>
 								<p class='card-title text-center'><span class='pricing'>$${room.price}</span>/pernight</p>
