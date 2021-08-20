@@ -1,3 +1,9 @@
+// Worked on by Hundeyin Oluwadamilola
+// Student Number: 8734970
+// Description: This file maps through the rooms Data as given and displays them in the page
+
+//-------------------------------------------
+
 // Data for the rooms
 const roomsData = [
     {
@@ -39,7 +45,9 @@ const roomsData = [
 
 // loop through roomsData and add the rooms to the rooms showcase div
 for(var i = 0; i < roomsData.length; i++){
+    // store each room in a variable
     let room = roomsData[i];
+    // create html elements for each table and append it to the rooms_showcase id element
     $('#rooms_showcase').append(
        `<div class='col-lg-4 col-md-6 col-sm-1'>
 						<div class='card'>
@@ -73,6 +81,7 @@ for(var i = 0; i < roomsData.length; i++){
 									<div class='services mt-4'>
 										<p class='text-blue text-sm text-left'>Services</p>
 										<ul id='services-list-box'>
+                                        <!--Map through the rooms and display a li element-->
 										${room.services.map(service => `<li class='services-list'>${service}</li>`).join('')}
 										</ul>
 									</div>
