@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	// runs when an h2 heading is clicked
+	// runs when an h3 heading is clicked
     $("#memdetails h3").click(function() {
 		$(this).toggleClass("minus");
 		if ($(this).attr("class") != "minus") {
