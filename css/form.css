@@ -1,5 +1,267 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap');
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+a {
+    text-decoration: none !important
+}
+
+/* top-nav styles */
+
+.top-nav {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.top-left {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.top-nav .top-left li i {
+    color: #141E61;
+    margin-right: 4px;
+}
+
+.top-nav .top-left li {
+    list-style: none;
+    display: inline-block;
+    font-size: small;
+    color: #19191a;
+    font-weight: 500;
+    padding: 14px 0 12px;
+    margin-right: 64px;
+    position: relative;
+}
+
+.top-nav .top-left li:after {
+    position: absolute;
+    right: -32px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #e5e5e5;
+    content: "";
+}
+
+
+.top-nav .top-right {
+    text-align: right;
+}
+
+.top-nav .top-right .top-social {
+    display: inline-block;
+    margin-right: 35px;
+    padding: 13px 0;
+}
+
+.top-nav .top-right .top-social a {
+    display: inline-block;
+    font-size: 16px;
+    color: #19191a;
+    margin-left: 15px;
+}
+
+.top-nav .top-right .bk-btn {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 28px 15px;
+    background: #0F044C;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.top-nav .top-right .language-option {
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+    padding: 13px 0px 11px;
+    position: relative;
+}
+
+.top-nav .top-right .language-option img {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.top-nav .top-right .language-option span {
+    font-size: 16px;
+    color: #19191a;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.menu-item .nav-menu {
+    text-align: right;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: #141E61 !important;
+}
+
+
+
+.logo-white{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+
+/* FOOTER STYLES */
+.content {
+    min-height: calc(100vh - 390px);
+}
+
+footer {
+    background-color: #0F044C;
+    height: 390px;
+}
+
+.footer-text {
+    padding: 80px 0 30px;
+}
+
+.footer-text .ft-about {
+    margin-bottom: 30px;
+}
+
+.footer-text .ft-about p {
+    color: #aaaab3;
+    margin-bottom: 20px;
+}
+
+.footer-text .ft-about .fa-social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #5A4D48;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-right: 7px;
+}
+
+.footer-text .ft-contact {
+    margin-bottom: 30px;
+}
+
+.footer-text .ft-contact h6 {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: "Cabin", sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-text .ft-contact ul li {
+    font-size: 16px;
+    color: #aaaab3;
+    line-height: 32px;
+    list-style: none;
+}
+
+.footer-text .ft-newslatter h6 {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: "Cabin", sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-text .ft-newslatter p {
+    color: #aaaab3;
+    margin-bottom: 20px;
+}
+
+.footer-text .ft-newslatter .fn-form {
+    position: relative;
+}
+
+.footer-text .ft-newslatter .fn-form input {
+    width: 100%;
+    height: 50px;
+    border-radius: 2px;
+    background: #fff;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #707079;
+}
+
+.footer-text .ft-newslatter .fn-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    background: #141E61;
+    color: #ffffff;
+    padding: 0 16px;
+    height: 50px;
+    border: none;
+    border-radius: 0 2px 2px 0;
+}
+
+.copyright-option {
+    background: rgba(16, 20, 31, 0.2);
+    padding: 20px 0;
+}
+
+.copyright-option ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 34px;
+}
+
+.copyright-option .co-text {
+    font-size: 16px;
+    color: #707079;
+    text-align: right;
+}
+
+.copyright-option .co-text p {
+    font-size: 16px;
+    font-family: "Cabin", sans-serif;
+    color: #6b6b6b;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+}
+
+
+/* Form Code */
+
 *{
   margin: 0;
   padding: 0;
@@ -13,12 +275,14 @@ body{
   width: 100%;
   background: #fff;
   margin: 20px auto 3em auto;
-  /*padding: 30px;*/
+  border: 8px solid #0F044C;
+  padding: 30px;
+  font-weight: bolder;
 }
 
 .wrapper .title{
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
   margin-bottom: 2em;
   color: #0F044C;
   text-transform: uppercase;
@@ -133,7 +397,7 @@ body{
   display: none;
 }
 .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
-  background: #fec107;
+  background: #0F044C;
 }
 
 .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
@@ -165,25 +429,7 @@ span{
   
 }
 
-.response {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  border: 0.5vw solid black;
-  padding: 20px;
-  justify-content: center;
-  text-align: center;
-}
 
-.response h1 {
-  font-size: 3em;
-  color: #0F044C
-}
-
-.response p {
-  font-size: 2em;
-  font-weight: bold;
-  color: #0F044C
-}
 
 
 @media (max-width:420px) {
