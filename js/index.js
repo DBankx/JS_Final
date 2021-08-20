@@ -1,4 +1,5 @@
 /* // Worked on by Deepanshu Joshi
+// JavScript Final Project
 // Student Id : 8726016
 // Description: The details selected by the user at the Home Page are being redirected to reservations.html page
 
